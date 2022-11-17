@@ -31,9 +31,6 @@ class CarService {
   public async getAll() {
     const carModel = new CarModel();
     const cars = await carModel.getAll();
-    if (cars.length === 0) {
-      throw new Error('Car not found');
-    }
     return this.CarList(cars);
   }
 
@@ -44,6 +41,15 @@ class CarService {
       throw new Error('Car not found');
     }
     return this.createCar(car);
+  }
+
+  public async update(id: string, car: ICar) {
+    const carModel = new CarModel();
+    const updatedCar = await carModel.update(id, car);
+    if (!updatedCar) {
+      throw new Error('Car not found');
+    }
+    return this.createCar(updatedCar);
   }
 }
 

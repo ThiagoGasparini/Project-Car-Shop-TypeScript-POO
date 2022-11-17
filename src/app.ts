@@ -14,6 +14,9 @@ app.get('/cars', (req, res, next) =>
 app.get('/cars/:id', (req, res, next) =>
   new CarController(req, res, next).findById());
 
+app.put('/cars/:id', (req, res, next) =>
+  new CarController(req, res, next).update());
+
 app.use(Errors.handle);
 
 export default app;

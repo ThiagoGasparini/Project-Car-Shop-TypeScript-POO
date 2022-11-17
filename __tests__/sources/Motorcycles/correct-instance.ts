@@ -1,4 +1,4 @@
-import Motorcycle from '../../../src/Domains/Motorcycle';
+import Motorcycle from '../../../src/Domains/Vehicle';
 import IMotorcycle from '../../../src/Interfaces/IMotorcycle';
 import { validMotorcycle, validMotorcycleWithStatus } from '../../utils/MotorcyclesMock';
 

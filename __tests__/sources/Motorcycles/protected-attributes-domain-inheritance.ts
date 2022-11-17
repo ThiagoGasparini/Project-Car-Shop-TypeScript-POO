@@ -1,4 +1,4 @@
-import Motorcycle from '../../../src/Domains/Motorcycle';
+import Motorcycle from '../../../src/Domains/Vehicle';
 
 class subMotorcycleTest extends Motorcycle {
   public getModel() {

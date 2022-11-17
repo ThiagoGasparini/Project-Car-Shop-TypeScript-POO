@@ -1,1 +1,1 @@
-import Motorcycle from '../../../src/Domains/Motorcycle';
+import Motorcycle from '../../../src/Domains/Vehicle';

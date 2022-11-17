@@ -21,6 +21,16 @@ app.put('/cars/:id', (req, res, next) =>
 app.post('/motorcycles', (req, res, next) =>
   new MotorcycleController(req, res, next).create());
 
+app.get(
+  '/motorcycles',
+  (req, res, next) => new MotorcycleController(req, res, next).getAll(),
+);
+  
+app.get(
+  '/motorcycles/:id',
+  (req, res, next) => new MotorcycleController(req, res, next).findById(),
+);
+
 app.use(Errors.handle);
 
 export default app;

@@ -2,8 +2,7 @@ import IMotorcycle from '../../../../src/Interfaces/IMotorcycle';
 import Motorcycle from '../../../../src/Domains/Motorcycle';
 
 const motorcycleMock: IMotorcycle = {
-  // eslint-disable-next-line sonarjs/no-duplicate-string
-  model: 'Honda Cb 600f Hornet',
+  model: 'Honda Cb',
   year: 2005,
   color: 'Yellow',
   status: true,
@@ -14,7 +13,7 @@ const motorcycleMock: IMotorcycle = {
 
 const motorcycleMockWithId: IMotorcycle = {
   id: '6348513f34c397abcad040b2',
-  model: 'Honda Cb 600f Hornet',
+  model: 'Honda Cb',
   year: 2005,
   color: 'Yellow',
   status: true,
@@ -26,7 +25,7 @@ const motorcycleMockWithId: IMotorcycle = {
 const motorsOutput: IMotorcycle[] = [
   {
     id: '634852326b35b59438fbea2f',
-    model: 'Honda Cb 600f Hornet',
+    model: 'Honda Cb',
     year: 2005,
     color: 'Yellow',
     status: true,

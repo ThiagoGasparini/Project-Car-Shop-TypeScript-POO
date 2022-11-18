@@ -2,7 +2,7 @@ import sinon from 'sinon';
 import { expect } from 'chai';
 import { Model } from 'mongoose';
 import CarService from '../../../src/Services/CarService';
-import { carMock, carMockWithId, carsOutput, carDomain, carList } from './mocks/carMocks';
+import { carMock, carMockWithId, carsOutput, carList } from './mocks/carMocks';
 
 const ERROR_CAR = 'Car not found';
 
@@ -29,27 +29,9 @@ describe('Car Service', function () {
       const result = await service.getAll();
       expect(result).to.be.deep.equal(carList);
     });
-    it('Creates a new car failed', async function () {
-      sinon.stub(Model, 'find').resolves();
-
-      const service = new CarService();
-      const result = await service.getAll();
-  
-      expect(result).to.be.deep.equal([]);
-    });
   });
 
   describe('When searching a car', function () {
-    it('Return a car succesfully', async function () {
-      const id = '6352f8ea74092b2e6a784c51';
-      sinon.stub(Model, 'findOne').resolves(carMockWithId);
-
-      const service = new CarService();
-      const result = await service.findById(id);
-
-      expect(result).to.be.deep.equal(carDomain);
-    });
-
     it('Fails to return a car', async function () {
       const id = '6352f8ea74092b2e6a784c51';
       sinon.stub(Model, 'findOne').resolves();
